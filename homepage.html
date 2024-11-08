@@ -7,53 +7,73 @@
 </head>
 <body>
   <h1>FOOD WASTE WARRIOR</h1>
-  <h1>Help in the global fight against food waste</h1>
-  <h2>Lunch Buffet for MDDI Staff Event on 6 Nov 2024</h2>
-<h2>Please take 5 min to select how much you will be eating</h2>
-
- <table border="1">
+  
+  <!-- New Table for Dietary Requirements -->
+  <h2>Dietary Requirements</h2>
+  <table border="1">
     <tr>
-      <th>Food Item</th>
-      <th>Not eating</th>
-      <th>A little; just for tasting</th>
-      <th>Half Portion</th>
-      <th>1 full portion</th>
+      <th>Do you have any dietary requirements?</th>
+      <th>Vegetarian</th>
+      <th>Allergies</th>
     </tr>
     <tr>
-      <td>Fried rice</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half Portion</td>
-      <td>1 full portion</td>
-    </tr>
-    <tr>
-      <td>Stir-fried kailan</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half Portion</td>
-      <td>1 full portion</td>
-    </tr>
-    <tr>
-      <td>Honey chicken</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half portion</td>
-      <td>1 full portion</td>
-    </tr>
-    <tr>
-      <td>Steamed fish fillet</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half portion</td>
-      <td>1 full portion</td>
-    </tr>
-    <tr>
-      <td>Almond jelly</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half portion</td>
-      <td>1 full portion</td>
+      <td>Specify requirements:</td>
+      <td>
+        <input type="checkbox" id="vegetarian" name="dietaryRequirement" value="Vegetarian">
+        <label for="vegetarian">Vegetarian</label>
+      </td>
+      <td>
+        <input type="text" id="allergies" name="allergies" placeholder="List allergies here">
+      </td>
     </tr>
   </table>
+  
+  <!-- Existing Table for Buffet Food Items with Portion Size Selection -->
+  <h2>Buffet Food Items and Portion Sizes</h2>
+  <table border="1">
+    <tr>
+      <th>Food Item</th>
+      <th>Small Portion</th>
+      <th>Medium Portion</th>
+      <th>Large Portion</th>
+      <th>Extra Large Portion</th>
+    </tr>
+    <tr>
+      <td>Food 1</td>
+      <td><input type="radio" name="food1" value="small"> Small</td>
+      <td><input type="radio" name="food1" value="medium"> Medium</td>
+      <td><input type="radio" name="food1" value="large"> Large</td>
+      <td><input type="radio" name="food1" value="extra-large"> Extra Large</td>
+    </tr>
+    <tr>
+      <td>Food 2</td>
+      <td><input type="radio" name="food2" value="small"> Small</td>
+      <td><input type="radio" name="food2" value="medium"> Medium</td>
+      <td><input type="radio" name="food2" value="large"> Large</td>
+      <td><input type="radio" name="food2" value="extra-large"> Extra Large</td>
+    </tr>
+    <tr>
+      <td>Food 3</td>
+      <td><input type="radio" name="food3" value="small"> Small</td>
+      <td><input type="radio" name="food3" value="medium"> Medium</td>
+      <td><input type="radio" name="food3" value="large"> Large</td>
+      <td><input type="radio" name="food3" value="extra-large"> Extra Large</td>
+    </tr>
+    <tr>
+      <td>Food 4</td>
+      <td><input type="radio" name="food4" value="small"> Small</td>
+      <td><input type="radio" name="food4" value="medium"> Medium</td>
+      <td><input type="radio" name="food4" value="large"> Large</td>
+      <td><input type="radio" name="food4" value="extra-large"> Extra Large</td>
+    </tr>
+    <tr>
+      <td>Food 5</td>
+      <td><input type="radio" name="food5" value="small"> Small</td>
+      <td><input type="radio" name="food5" value="medium"> Medium</td>
+      <td><input type="radio" name="food5" value="large"> Large</td>
+      <td><input type="radio" name="food5" value="extra-large"> Extra Large</td>
+    </tr>
+  </table>
+  
 </body>
 </html>
