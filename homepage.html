@@ -1,127 +1,93 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Warrior</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FOOD WASTE WARRIOR</h1>
+            <p>Help in the global fight against food waste</p>
+            <p><a href="#">Lunch Buffet for MDDI Staff Event on 6 Nov 2024</a></p>
+            <p>Please take 5 min to select how much you will be eating</p>
+        </header>
 
-.container {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #dfe4d7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        <table>
+            <thead>
+                <tr>
+                    <th>Food Item</th>
+                    <th colspan="4">Select Portion Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. Cold Salad</td>
+                    <td><input type="radio" name="salad" value="0"></td>
+                    <td><input type="radio" name="salad" value="1/3"></td>
+                    <td><input type="radio" name="salad" value="1/2"></td>
+                    <td><input type="radio" name="salad" value="1"></td>
+                </tr>
+                <tr>
+                    <td>2. Main (rice/beehoon/pasta)</td>
+                    <td><input type="radio" name="main" value="0"></td>
+                    <td><input type="radio" name="main" value="1/3"></td>
+                    <td><input type="radio" name="main" value="1/2"></td>
+                    <td><input type="radio" name="main" value="1"></td>
+                </tr>
+                <tr>
+                    <td>3. Vegetables</td>
+                    <td><input type="radio" name="vegetables" value="0"></td>
+                    <td><input type="radio" name="vegetables" value="1/3"></td>
+                    <td><input type="radio" name="vegetables" value="1/2"></td>
+                    <td><input type="radio" name="vegetables" value="1"></td>
+                </tr>
+                <tr>
+                    <td>4. Fish</td>
+                    <td><input type="radio" name="fish" value="0"></td>
+                    <td><input type="radio" name="fish" value="1/3"></td>
+                    <td><input type="radio" name="fish" value="1/2"></td>
+                    <td><input type="radio" name="fish" value="1"></td>
+                </tr>
+                <tr>
+                    <td>5. Chicken</td>
+                    <td><input type="radio" name="chicken" value="0"></td>
+                    <td><input type="radio" name="chicken" value="1/3"></td>
+                    <td><input type="radio" name="chicken" value="1/2"></td>
+                    <td><input type="radio" name="chicken" value="1"></td>
+                </tr>
+                <tr>
+                    <td>6. Finger food (Nuggets/fried popiah)</td>
+                    <td><input type="radio" name="finger_food" value="0"></td>
+                    <td><input type="radio" name="finger_food" value="1/3"></td>
+                    <td><input type="radio" name="finger_food" value="1/2"></td>
+                    <td><input type="radio" name="finger_food" value="1"></td>
+                </tr>
+                <tr>
+                    <td>7. Dessert</td>
+                    <td><input type="radio" name="dessert" value="0"></td>
+                    <td><input type="radio" name="dessert" value="1/3"></td>
+                    <td><input type="radio" name="dessert" value="1/2"></td>
+                    <td><input type="radio" name="dessert" value="1"></td>
+                </tr>
+                <tr>
+                    <td>8. Beverage</td>
+                    <td><input type="radio" name="beverage" value="0"></td>
+                    <td><input type="radio" name="beverage" value="1/3"></td>
+                    <td><input type="radio" name="beverage" value="1/2"></td>
+                    <td><input type="radio" name="beverage" value="1"></td>
+                </tr>
+            </tbody>
+        </table>
 
-header {
-    text-align: center;
-    background-color: #686d0e;
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px 8px 0 0;
-}
-git add .
-git commit -m "Initial setup of Food Waste Warrior webpage"
-git push origin main
-
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-    background-color: #ffffff;
-}
-
-table, th, td {
-    border: 1px solid #686d0e;
-    text-align: center;
-    padding: 8px;
-}
-
-thead th {
-    background-color: #b8c28c;
-    font-weight: bold;
-}
-
-input[type="radio"] {
-    transform: scale(1.2);
-}
-
-aside {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f0f2eb;
-    border-radius: 8px;
-}
-
-aside h2 {
-    margin: 0;
-    font-size: 18px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-.container {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #dfe4d7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    text-align: center;
-    background-color: #686d0e;
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px 8px 0 0;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-    background-color: #ffffff;
-}
-
-table, th, td {
-    border: 1px solid #686d0e;
-    text-align: center;
-    padding: 8px;
-}
-
-thead th {
-    background-color: #b8c28c;
-    font-weight: bold;
-}
-
-input[type="radio"] {
-    transform: scale(1.2);
-}
-
-aside {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f0f2eb;
-    border-radius: 8px;
-}
-
-aside h2 {
-    margin: 0;
-    font-size: 18px;
-}
+        <aside>
+            <h2>1 Portion Means:</h2>
+            <p><strong>For Food</strong></p>
+            <p><strong>For Dessert</strong></p>
+            <p><strong>For Beverage</strong></p>
+        </aside>
+    </div>
+</body>
+</html>
