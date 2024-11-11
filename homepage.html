@@ -4,75 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FOOD WASTE WARRIOR</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>FOOD WASTE WARRIOR</h1>
-  <h1>Help in the global fight against food waste</h1>
-  <h2>Lunch Buffet for MDDI Staff Event on 6 Nov 2024</h2>
 
-    <table border="1">
-    <tr>
-      <th>Do you have any dietary requirements?</th>
-      <th>Vegetarian</th>
-      <th>Allergies</th>
-    </tr>
-    <tr>
-      <td>Specify requirements:</td>
-      <td>
-        <input type="checkbox" id="vegetarian" name="dietaryRequirement" value="Vegetarian">
-        <label for="vegetarian">Vegetarian</label>
-      </td>
-      <td>
-        <input type="text" id="allergies" name="allergies" placeholder="List allergies here">
-      </td>
-    </tr>
-  </table>
-  
-<h2>Please take 5 min to select how much you will be eating</h2>
+  <header>
+    <h1>FOOD WASTE WARRIOR</h1>
+    <h2>Help in the global fight against food waste</h2>
+    <h3>Lunch Buffet for MDDI Staff Event on 6 Nov 2024</h3>
+    <p>Please take 5 min to select how much you will be eating</p>
+  </header>
 
- <table border="1">
+  <table>
     <tr>
       <th>Food Item</th>
-      <th>Not eating</th>
-      <th>A little; just for tasting</th>
-      <th>Half Portion</th>
-      <th>1 full portion</th>
+      <th colspan="4">Select Portion Size</th>
     </tr>
     <tr>
-      <td>Fried rice</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half Portion</td>
-      <td>1 full portion</td>
+      <td>Cold Salad</td>
+      <td><input type="radio" name="cold_salad" value="0"></td>
+      <td><input type="radio" name="cold_salad" value="1/3"></td>
+      <td><input type="radio" name="cold_salad" value="1/2"></td>
+      <td><input type="radio" name="cold_salad" value="1"></td>
     </tr>
     <tr>
-      <td>Stir-fried kailan</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half Portion</td>
-      <td>1 full portion</td>
+      <td>Main (rice/beehoon/pasta)</td>
+      <td><input type="radio" name="main" value="0"></td>
+      <td><input type="radio" name="main" value="1/3"></td>
+      <td><input type="radio" name="main" value="1/2"></td>
+      <td><input type="radio" name="main" value="1"></td>
     </tr>
-    <tr>
-      <td>Honey chicken</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half portion</td>
-      <td>1 full portion</td>
-    </tr>
-    <tr>
-      <td>Steamed fish fillet</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half portion</td>
-      <td>1 full portion</td>
-    </tr>
-    <tr>
-      <td>Almond jelly</td>
-      <td>Not eating</td>
-      <td>A little; just for tasting</td>
-      <td>Half portion</td>
-      <td>1 full portion</td>
-    </tr>
+    <!-- Repeat similar rows for other food items -->
   </table>
+
+  <aside>
+    <h3>1 Portion Means:</h3>
+    <p><strong>For Food:</strong> ...</p>
+    <p><strong>For Dessert:</strong> ...</p>
+    <p><strong>For Beverage:</strong> ...</p>
+  </aside>
+
 </body>
 </html>
