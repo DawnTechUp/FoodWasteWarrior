@@ -25,6 +25,34 @@ header h1 {
     margin: 0;
     font-size: 24px;
 }
+.questionnaire {
+    width: 100%; /* Ensures the table spans the full container width */
+    margin: 20px 0;
+}
+
+.sleek-table {
+    width: 100%; /* Makes the table full width within the container */
+    border-collapse: collapse;
+}
+
+.sleek-table td {
+    width: 50%; /* Ensures even spacing across the table */
+    padding: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.sleek-table input[type="radio"] {
+    margin-right: 5px;
+}
+
+.allergy-input {
+    margin-left: 10px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60%; /* Adjusts input width to fit within the full table span */
+}
 
 table {
     width: 100%;
