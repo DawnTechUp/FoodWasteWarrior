@@ -15,6 +15,27 @@
             <p>Please take 5 min to indicate how much you will be eating</p>
         </header>
 
+        <div class="questionnaire">
+            <table class="sleek-table">
+                <tr>
+                    <td>Are you having lunch with us?</td>
+                    <td>
+                        <label><input type="radio" name="lunch" value="yes"> Yes</label>
+                        <label><input type="radio" name="lunch" value="no"> No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Indicate your dietary requirement, if any. (All food items are halal)</td>
+                    <td>
+                        <label><input type="radio" name="diet" value="no"> No</label>
+                        <label><input type="radio" name="diet" value="vegetarian"> Vegetarian</label>
+                        <label><input type="radio" name="diet" value="allergies"> Allergies</label>
+                        <input type="text" name="allergies" placeholder="Specify your allergies" class="allergy-input">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
         <table>
             <thead>
                 <tr>
