@@ -5,6 +5,18 @@ function calculateCatering() {
     let currentCostSavings = 40;
     const perPersonCost = 20;
 
+    const lunchSelection = document.querySelector('input[name="lunch"]:checked');
+    if (lunchSelection && lunchSelection.value === "no") {
+        // User is not having lunch, adjust cost savings and display results
+        currentCostSavings += 20; // Increase savings by one person's cost
+        document.getElementById("result").innerHTML = `
+            <p>Total catered portions: ${currentCateredPortions}</p>
+            <p>Total cost: $${currentTotalCost}</p>
+            <p>Cost savings: $${currentCostSavings}</p>
+        `;
+        return; // Exit the function as no further calculation is needed
+    }
+    
     // Track if the current user should be counted as a full portion
     let userIsFullPortion = false;
 
