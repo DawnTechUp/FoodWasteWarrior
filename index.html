@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-96W6TB0Z9Z"></script>
+<script src="script.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -54,9 +55,9 @@
 
         <aside>
             <h2>1 Portion Means:</h2>
-            <p><strong>For Food</strong></p>
-            <p><strong>For Dessert</strong></p>
-            <p><strong>For Beverage</strong></p>
+            <p><strong>For Food: 1 full laddle/tong</strong></p>
+            <p><strong>For Dessert: 1 full disposable bowl</strong></p>
+            <p><strong>For Beverage: 1 full disposable cup</strong></p>
         </aside>
     </div>
     
@@ -100,12 +101,15 @@
                 <p>Total cost: $${currentTotalCost}</p>
                 <p>Cost savings: $${currentCostSavings}</p>
             `;
-        }
-        localStorage.setItem("cateredPortions", currentCateredPortions);
-    localStorage.setItem("totalCost", currentTotalCost);
-    localStorage.setItem("costSavings", currentCostSavings);
 
-    window.location.href = "thankyou.html";
+            localStorage.setItem("cateredPortions", currentCateredPortions);
+            localStorage.setItem("totalCost", currentTotalCost);
+            localStorage.setItem("costSavings", currentCostSavings);
+            window.location.href = "/thankyou.html";
+        }
+       
+
+
     </script>
 
 </body>
