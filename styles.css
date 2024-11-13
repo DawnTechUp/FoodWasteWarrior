@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat';
     background-color: #f4f4f4;
     color: #333;
 }
@@ -15,11 +15,17 @@ body {
 
 header {
     text-align: center;
-    background-color: #686d0e;
-    color: #fff;
+    background-color:#4B6F44;
+    color: whitesmoke;
     padding: 10px;
     border-radius: 8px 8px 0 0;
 }
+
+.info-text {
+    color: green;
+    font-size: 1.17em; /* Equivalent to <h3> size */
+    margin-top: 10px;
+    text-align: center;
 
 header h1 {
     margin: 0;
@@ -28,11 +34,19 @@ header h1 {
 .questionnaire {
     width: 100%; /* Ensures the table spans the full container width */
     margin: 20px 0;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
 }
+/* Add a margin to create space between the tables */
+.table-separator {
+    margin-bottom: 8cm; /* 8 cm spacing */
+}
+
 
 .sleek-table {
     width: 100%; /* Makes the table full width within the container */
-    border-collapse: collapse;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
 }
 
 .sleek-table td {
