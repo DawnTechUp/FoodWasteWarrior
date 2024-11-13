@@ -35,8 +35,8 @@ header h1 {
 
 /* Information Text Styling */
 .info-text {
-    color: green;
-    font-size: 1.3em; /* Equivalent to a larger <h3> size */
+    color: #666666; /* Set text color to gray */
+    font-size: 1.3em; /* Larger size for readability */
     margin-top: 10px;
     text-align: center;
 }
@@ -119,6 +119,12 @@ header h1 {
     text-align: left;
 }
 
+/* Bold styling for questionnaire questions */
+.question-text {
+    font-weight: bold;
+    font-size: 1.1em; /* Slightly larger for emphasis */
+}
+
 /* Button Styling with Hover Effect */
 button {
     background-color: #4B6F44;
@@ -187,3 +193,4 @@ footer {
     margin-top: 20px;
     font-size: 16px; /* Larger font size for footer */
 }
+
