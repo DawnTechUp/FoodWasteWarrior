@@ -1,4 +1,25 @@
 function calculateCatering() {
+    <script>
+    function calculateCatering() {
+        const noOption = document.getElementById("noOption");
+
+        // Check if the "No" option is selected
+        if (noOption.checked) {
+            // Set the default values if the user is not having lunch
+            const totalPortions = 18;
+            const totalCost = 360; // $20 per portion * 18 portions
+            const costSavings = 60; // Assuming this is the cost savings when catering 18 portions
+
+            // Store these values in localStorage for the Thank You page
+            localStorage.setItem("cateredPortions", totalPortions);
+            localStorage.setItem("totalCost", totalCost);
+            localStorage.setItem("costSavings", costSavings);
+
+            // Redirect to the Thank You page
+            window.location.href = "thankyou.html";
+            return; // Exit the function
+        }
+    
     // Variables based on existing data
     let currentCateredPortions = 18;
     let currentTotalCost = 360;
