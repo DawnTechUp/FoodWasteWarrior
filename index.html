@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +14,30 @@
       gtag('js', new Date());
       gtag('config', 'G-96W6TB0Z9Z');
     </script>
+    <script>
+        function calculateCatering() {
+            const noOption = document.getElementById("noOption");
+
+            // Check if the "No" option is selected
+            if (noOption.checked) {
+                // Set the default values if the user is not having lunch
+                const totalPortions = 18;
+                const totalCost = 360; // $20 per portion * 18 portions
+                const costSavings = 60; // Assuming this is the cost savings when catering 18 portions
+
+                // Store these values in localStorage for the Thank You page
+                localStorage.setItem("cateredPortions", totalPortions);
+                localStorage.setItem("totalCost", totalCost);
+                localStorage.setItem("costSavings", costSavings);
+
+                // Redirect to the Thank You page
+                window.location.href = "thankyou.html";
+                return; // Exit the function
+            }
+
+            // Additional logic for users who are having lunch would go here
+        }
+    </script>
 </head>
 
 <body>
@@ -26,8 +50,6 @@
         <h3 class="info-text">Lunch buffet for MDDI internal staff event, 20 Nov 2024</h3>
         <h3 class="info-text">Just take 5 min to select how much you will be eating</h3>
 
-        <table class="table-separator"></table>
-        
         <!-- New Table for Additional Questions -->
         <div class="questionnaire">
             <table class="sleek-table">
@@ -35,21 +57,8 @@
                     <td><span class="question-text">Are you having lunch with us?</span></td>
                     <td>
                         <label><input type="radio" name="lunch" value="yes"> Yes</label>
-                        <label><input type="radio" name="lunch" value="no"> No</label>
+                        <label><input type="radio" name="lunch" id="noOption" value="no"> No</label>
                     </td>
-<!-- Updated HTML for "Are you having lunch with us?" -->
-<div class="questionnaire">
-    <table class="sleek-table">
-        <tr>
-            <td><span class="question-text">Are you having lunch with us?</span></td>
-            <td>
-                <label><input type="radio" name="lunch" value="yes"> Yes</label>
-                <label><input type="radio" name="lunch" id="noOption" value="no"> No</label>
-            </td>
-        </tr>
-        <!-- Other fields remain the same -->
-    </table>
-</div>
                 </tr>
                 <tr>
                     <td><span class="question-text">Indicate your dietary requirement, if any. (All food items are halal)</span></td>

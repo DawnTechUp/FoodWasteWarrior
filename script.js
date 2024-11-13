@@ -1,43 +1,37 @@
 function calculateCatering() {
-    <script>
-    function calculateCatering() {
-        const noOption = document.getElementById("noOption");
+    const noOption = document.getElementById("noOption");
 
-        // Check if the "No" option is selected
-        if (noOption.checked) {
-            // Set the default values if the user is not having lunch
-            const totalPortions = 18;
-            const totalCost = 360; // $20 per portion * 18 portions
-            const costSavings = 60; // Assuming this is the cost savings when catering 18 portions
+    // Debugging: Check if function is called
+    console.log("calculateCatering function called");
 
-            // Store these values in localStorage for the Thank You page
-            localStorage.setItem("cateredPortions", totalPortions);
-            localStorage.setItem("totalCost", totalCost);
-            localStorage.setItem("costSavings", costSavings);
+    // Check if the "No" option is selected
+    if (noOption && noOption.checked) {
+        console.log("No option selected, redirecting...");
 
-            // Redirect to the Thank You page
-            window.location.href = "thankyou.html";
-            return; // Exit the function
-        }
-    
+        // Set the default values if the user is not having lunch
+        const totalPortions = 18;
+        const totalCost = 360; // $20 per portion * 18 portions
+        const costSavings = 60; // Assuming this is the cost savings when catering 18 portions
+
+        // Store these values in localStorage for the Thank You page
+        localStorage.setItem("cateredPortions", totalPortions);
+        localStorage.setItem("totalCost", totalCost);
+        localStorage.setItem("costSavings", costSavings);
+
+        // Redirect to the Thank You page
+        window.location.href = "thankyou.html";
+        return; // Exit the function
+    }
+
+    // Additional calculations if the user is having lunch
+    console.log("User selected Yes for lunch, performing additional calculations...");
+
     // Variables based on existing data
     let currentCateredPortions = 18;
     let currentTotalCost = 360;
     let currentCostSavings = 40;
     const perPersonCost = 20;
 
-    const lunchSelection = document.querySelector('input[name="lunch"]:checked');
-    if (lunchSelection && lunchSelection.value === "no") {
-        // User is not having lunch, adjust cost savings and display results
-        currentCostSavings += 20; // Increase savings by one person's cost
-        // document.getElementById("result").innerHTML = `
-        //     <p>Total catered portions: ${currentCateredPortions}</p>
-        //     <p>Total cost: $${currentTotalCost}</p>
-        //     <p>Cost savings: $${currentCostSavings}</p>
-        // `;
-        // return; // Exit the function as no further calculation is needed
-    }
-    
     // Track if the current user should be counted as a full portion
     let userIsFullPortion = false;
 
@@ -63,9 +57,11 @@ function calculateCatering() {
         currentCostSavings += 20; // Increase savings by one person's cost
     }
 
-
+    // Store the calculated values in localStorage for the Thank You page
     localStorage.setItem("cateredPortions", currentCateredPortions);
     localStorage.setItem("totalCost", currentTotalCost);
     localStorage.setItem("costSavings", currentCostSavings);
-    window.location.href = "/thankyou.html";
+
+    // Redirect to the Thank You page
+    window.location.href = "thankyou.html";
 }
