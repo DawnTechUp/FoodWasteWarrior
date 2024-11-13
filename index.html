@@ -101,6 +101,11 @@
                 <p>Cost savings: $${currentCostSavings}</p>
             `;
         }
+        localStorage.setItem("cateredPortions", currentCateredPortions);
+    localStorage.setItem("totalCost", currentTotalCost);
+    localStorage.setItem("costSavings", currentCostSavings);
+
+    window.location.href = "thankyou.html";
     </script>
 
 </body>
