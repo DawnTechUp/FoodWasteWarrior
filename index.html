@@ -4,39 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Waste Warrior</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-96W6TB0Z9Z"></script>
-    <script src="script.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-96W6TB0Z9Z');
-    </script>
-    <script>
-        function calculateCatering() {
-            const noOption = document.getElementById("noOption");
-
-            // Check if the "No" option is selected
-            if (noOption.checked) {
-                // Set the default values if the user is not having lunch
-                const totalPortions = 18;
-                const totalCost = 360; // $20 per portion * 18 portions
-                const costSavings = 60; // Assuming this is the cost savings when catering 18 portions
-
-                // Store these values in localStorage for the Thank You page
-                localStorage.setItem("cateredPortions", totalPortions);
-                localStorage.setItem("totalCost", totalCost);
-                localStorage.setItem("costSavings", costSavings);
-
-                // Redirect to the Thank You page
-                window.location.href = "thankyou.html";
-                return; // Exit the function
-            }
-
-            // Additional logic for users who are having lunch would go here
-        }
     </script>
 </head>
 
@@ -133,7 +109,7 @@
             </div>
         </div>
 
-        <!-- Button and Result Display for Calculation -->
+        <!-- Button to trigger calculation and potential redirection -->
         <button onclick="calculateCatering()">Calculate</button>
     </div>
 </body>
