@@ -22,7 +22,7 @@
         <header>
             <h1>FOOD WASTE WARRIOR</h1>
             <p>Help in the global fight against food waste</p>
-            <p><a href="#">Lunch Buffet for MDDI Staff Event on 6 Nov 2024</a></p>
+            <p>Lunch Buffet for MDDI Staff Event on 6 Nov 2024</p>
             <p>Please take 5 min to select how much you will be eating</p>
         </header>
 
@@ -48,10 +48,59 @@
             </table>
         </div>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>Food Item</th>
+                    <th >Not at all</th>
+                    <th>A few pieces for taste</th>
+                    <th>Half portion</th>
+                    <th>1 full portion</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>1. Main (rice/beehoon/pasta)</td>
+                    <td><input type="radio" name="main" value="0"></td>
+                    <td><input type="radio" name="main" value="1/3"></td>
+                    <td><input type="radio" name="main" value="1/2"></td>
+                    <td><input type="radio" name="main" value="1"></td>
+                </tr>
+                <tr>
+                    <td>2. Vegetables</td>
+                    <td><input type="radio" name="vegetables" value="0"></td>
+                    <td><input type="radio" name="vegetables" value="1/3"></td>
+                    <td><input type="radio" name="vegetables" value="1/2"></td>
+                    <td><input type="radio" name="vegetables" value="1"></td>
+                </tr>
+                <tr>
+                    <td>3. Fish</td>
+                    <td><input type="radio" name="fish" value="0"></td>
+                    <td><input type="radio" name="fish" value="1/3"></td>
+                    <td><input type="radio" name="fish" value="1/2"></td>
+                    <td><input type="radio" name="fish" value="1"></td>
+                </tr>
+                <tr>
+                    <td>4. Dessert</td>
+                    <td><input type="radio" name="dessert" value="0"></td>
+                    <td><input type="radio" name="dessert" value="1/3"></td>
+                    <td><input type="radio" name="dessert" value="1/2"></td>
+                    <td><input type="radio" name="dessert" value="1"></td>
+                </tr>
+                <tr>
+                    <td>5. Beverage</td>
+                    <td><input type="radio" name="beverage" value="0"></td>
+                    <td><input type="radio" name="beverage" value="1/3"></td>
+                    <td><input type="radio" name="beverage" value="1/2"></td>
+                    <td><input type="radio" name="beverage" value="1"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+
         <!-- Button and Result Display for Calculation -->
         <button onclick="calculateCatering()">Calculate</button>
-
-        <div id="result"></div>
 
         <aside>
             <h2>1 Portion Means:</h2>
@@ -60,57 +109,6 @@
             <p><strong>For Beverage: 1 full disposable cup</strong></p>
         </aside>
     </div>
-    
-    <!-- JavaScript Calculation Logic -->
-    <script>
-        function calculateCatering() {
-            // Variables based on existing data
-            let currentCateredPortions = 18;
-            let currentTotalCost = 360;
-            let currentCostSavings = 40;
-            const perPersonCost = 20;
-
-            // Track if the current user should be counted as a full portion
-            let userIsFullPortion = false;
-
-            // Get all selected radio buttons for the user's choices
-            const portionSelections = document.querySelectorAll('input[type="radio"]:checked');
-
-            // Check each selected portion
-            portionSelections.forEach(selection => {
-                // If user selects 1/2 or 1 portion for any item, mark as full portion
-                if (selection.value === "1/2" || selection.value === "1") {
-                    userIsFullPortion = true;
-                }
-            });
-
-            // Calculate new totals based on the user's portion choices
-            if (userIsFullPortion) {
-                // User is counted as an additional portion
-                currentCateredPortions += 1;
-                currentTotalCost += perPersonCost;
-                // Cost savings remain unchanged
-            } else {
-                // User is not counted as an additional portion
-                currentCostSavings += 20; // Increase savings by one person's cost
-            }
-
-            // Display results
-            document.getElementById("result").innerHTML = `
-                <p>Total catered portions: ${currentCateredPortions}</p>
-                <p>Total cost: $${currentTotalCost}</p>
-                <p>Cost savings: $${currentCostSavings}</p>
-            `;
-
-            localStorage.setItem("cateredPortions", currentCateredPortions);
-            localStorage.setItem("totalCost", currentTotalCost);
-            localStorage.setItem("costSavings", currentCostSavings);
-            window.location.href = "/thankyou.html";
-        }
-       
-
-
-    </script>
 
 </body>
 </html>

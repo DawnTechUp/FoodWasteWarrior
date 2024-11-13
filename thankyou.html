@@ -20,18 +20,19 @@
         <h1>Thank You for Being our Food Waste Warrior!</h1>
         <p>Your response has been recorded successfully.</p>
         <a href="index.html" class="home-button">Go back to homepage</a>
+        <div id="result"></div>
 
-        <script>
-            // Retrieve values from local storage and display them
-            document.getElementById("catered-portions").textContent = localStorage.getItem("cateredPortions");
-            document.getElementById("total-cost").textContent = localStorage.getItem("totalCost");
-            document.getElementById("cost-savings").textContent = localStorage.getItem("costSavings");
-    
-            // Clear local storage after displaying to prevent old data from persisting
-            localStorage.removeItem("cateredPortions");
-            localStorage.removeItem("totalCost");
-            localStorage.removeItem("costSavings");
-        </script>
     </div>
+    <script>
+        // Retrieve values from local storage and display them
+
+        document.getElementById("result").innerHTML = `
+        <p>Total catered portions: ${localStorage.getItem("cateredPortions")}</p>
+        <p>Total cost: $${localStorage.getItem("totalCost")}</p>
+        <p>Cost savings: $${localStorage.getItem("costSavings")}</p>
+    `;
+
+    </script>
 </body>
+
 </html>
