@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,15 +6,14 @@
     <title>Food Waste Warrior</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-96W6TB0Z9Z"></script>
-<script src="script.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-96W6TB0Z9Z');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-96W6TB0Z9Z"></script>
+    <script src="script.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-96W6TB0Z9Z');
+    </script>
 </head>
 
 <body>
@@ -28,6 +27,7 @@
         <h3 class="info-text">Please take 5 min to select how much you will be eating</h3>
 
         <table class="table-separator"></table>
+        
         <!-- New Table for Additional Questions -->
         <div class="questionnaire">
             <table class="sleek-table">
@@ -50,68 +50,69 @@
             </table>
         </div>
 
-        <table>
-            <thead>
-                <table class="food-portion-table">
-                <tr>
-                    <th>Food Item</th>
-                    <th >Not at all</th>
-                    <th>A few pieces for taste</th>
-                    <th>Half portion</th>
-                    <th>1 full portion</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-                <tr>
-                    <td>1. Main (rice/beehoon/pasta)</td>
-                    <td><input type="radio" name="main" value="0"></td>
-                    <td><input type="radio" name="main" value="1/3"></td>
-                    <td><input type="radio" name="main" value="1/2"></td>
-                    <td><input type="radio" name="main" value="1"></td>
-                </tr>
-                <tr>
-                    <td>2. Vegetables</td>
-                    <td><input type="radio" name="vegetables" value="0"></td>
-                    <td><input type="radio" name="vegetables" value="1/3"></td>
-                    <td><input type="radio" name="vegetables" value="1/2"></td>
-                    <td><input type="radio" name="vegetables" value="1"></td>
-                </tr>
-                <tr>
-                    <td>3. Fish</td>
-                    <td><input type="radio" name="fish" value="0"></td>
-                    <td><input type="radio" name="fish" value="1/3"></td>
-                    <td><input type="radio" name="fish" value="1/2"></td>
-                    <td><input type="radio" name="fish" value="1"></td>
-                </tr>
-                <tr>
-                    <td>4. Dessert</td>
-                    <td><input type="radio" name="dessert" value="0"></td>
-                    <td><input type="radio" name="dessert" value="1/3"></td>
-                    <td><input type="radio" name="dessert" value="1/2"></td>
-                    <td><input type="radio" name="dessert" value="1"></td>
-                </tr>
-                <tr>
-                    <td>5. Beverage</td>
-                    <td><input type="radio" name="beverage" value="0"></td>
-                    <td><input type="radio" name="beverage" value="1/3"></td>
-                    <td><input type="radio" name="beverage" value="1/2"></td>
-                    <td><input type="radio" name="beverage" value="1"></td>
-                </tr>
-            </tbody>
-        </table>
-        
+        <!-- Container for Food Portion Table and Sidebar to Align Side-by-Side -->
+        <div class="table-sidebar-container">
+            <!-- Food Portion Options Table -->
+            <table class="food-portion-table">
+                <thead>
+                    <tr>
+                        <th>Food Item</th>
+                        <th>Not at all</th>
+                        <th>A few pieces for taste</th>
+                        <th>Half portion</th>
+                        <th>1 full portion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Main (rice/beehoon/pasta)</td>
+                        <td><input type="radio" name="main" value="0"></td>
+                        <td><input type="radio" name="main" value="1/3"></td>
+                        <td><input type="radio" name="main" value="1/2"></td>
+                        <td><input type="radio" name="main" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>2. Vegetables</td>
+                        <td><input type="radio" name="vegetables" value="0"></td>
+                        <td><input type="radio" name="vegetables" value="1/3"></td>
+                        <td><input type="radio" name="vegetables" value="1/2"></td>
+                        <td><input type="radio" name="vegetables" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>3. Fish</td>
+                        <td><input type="radio" name="fish" value="0"></td>
+                        <td><input type="radio" name="fish" value="1/3"></td>
+                        <td><input type="radio" name="fish" value="1/2"></td>
+                        <td><input type="radio" name="fish" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>4. Dessert</td>
+                        <td><input type="radio" name="dessert" value="0"></td>
+                        <td><input type="radio" name="dessert" value="1/3"></td>
+                        <td><input type="radio" name="dessert" value="1/2"></td>
+                        <td><input type="radio" name="dessert" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>5. Beverage</td>
+                        <td><input type="radio" name="beverage" value="0"></td>
+                        <td><input type="radio" name="beverage" value="1/3"></td>
+                        <td><input type="radio" name="beverage" value="1/2"></td>
+                        <td><input type="radio" name="beverage" value="1"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Sidebar for Portion Information -->
+            <div class="sidebar-box">
+                <h3>1 Portion Means for:</h3>
+                <p><strong>Food:</strong> 1 full ladle/tong</p>
+                <p><strong>Dessert:</strong> 1 full disposable bowl</p>
+                <p><strong>Beverage:</strong> 1 full disposable cup</p>
+            </div>
+        </div>
 
         <!-- Button and Result Display for Calculation -->
         <button onclick="calculateCatering()">Calculate</button>
-
-        <aside>
-            <h2>1 Portion Means:</h2>
-            <p><strong>For Food: 1 full laddle/tong</strong></p>
-            <p><strong>For Dessert: 1 full disposable bowl</strong></p>
-            <p><strong>For Beverage: 1 full disposable cup</strong></p>
-        </aside>
     </div>
-
 </body>
 </html>
