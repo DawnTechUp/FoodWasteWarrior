@@ -29,6 +29,17 @@ p {
     font-size: 1.2em;
     margin: 10px 0;
 }
+.response-summary {
+    text-align: center; /* Center-align text */
+    color: #800000; /* Maroon color */
+    font-size: 1.2em; /* Increase font size for emphasis */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.response-summary p {
+    margin: 10px 0; /* Add some vertical spacing between lines */
+}
 
 .home-button {
     display: inline-block;

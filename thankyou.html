@@ -4,40 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
-    <link rel="stylesheet" href="thankyou.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link the same CSS file here -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-96W6TB0Z9Z"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-96W6TB0Z9Z');
     </script>
 </head>
+
 <body>
-    <div class="thank-you-container">
-        <h1>Thank You for Being our Food Waste Warrior!</h1>
-        <p>Your response has been recorded successfully.</p>
-        <p>So far 21 out of 22 participants have responded. Based on their responses:</p>
-        
-        <div id="result"></div>
-<!-- Go to Homepage Button -->
-<button onclick="goToHomepage()" class="home-button">Go to Homepage</button>
-</div>
+    <div class="container">
+        <header>
+            <h1>FOOD WASTE WARRIOR</h1>
+            <p>Help in the global fight against food waste</p>
+        </header>
+
+        <div class="thank-you-container">
+            <h2>Thank You for Being our Food Waste Warrior!</h2>
+            <p>Your response has been recorded successfully.</p>
+
+            <!-- Prominent section for response summary -->
+            <div class="response-summary">
+                <p>So far, 21 out of 22 participants have responded. Based on their responses:</p>
+                <p>Total catered portions: <span id="totalPortions"></span></p>
+                <p>Total cost: $<span id="totalCost"></span></p>
+                <p>Cost savings: $<span id="costSavings"></span></p>
+            </div>
+
+            <button onclick="window.location.href='index.html'">Go to Homepage</button>
+        </div>
     </div>
+
     <script>
         // Retrieve values from local storage and display them
-        document.getElementById("result").innerHTML = `
-            <p>Total catered portions: ${localStorage.getItem("cateredPortions")}</p>
-            <p>Total cost: $${localStorage.getItem("totalCost")}</p>
-            <p>Cost savings: $${localStorage.getItem("costSavings")}</p>
-        `;
-
-        // JavaScript function to redirect to homepage
-        function goToHomepage() {
-            window.location.href = "index.html"; // Adjust the path if necessary
-        }
+        document.getElementById("totalPortions").innerText = localStorage.getItem("cateredPortions");
+        document.getElementById("totalCost").innerText = localStorage.getItem("totalCost");
+        document.getElementById("costSavings").innerText = localStorage.getItem("costSavings");
     </script>
 </body>
 </html>
