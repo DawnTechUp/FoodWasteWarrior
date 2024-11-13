@@ -85,21 +85,22 @@ header h1 {
 .sidebar-box {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
-    padding: 20px; /* Increased padding for spacing */
+    padding: 20px;
     border-radius: 5px;
     width: 6cm;
     box-sizing: border-box;
+    color: #666666; /* Set text color to a neutral gray */
 }
 
+/* Center and Align Sidebar Heading and Text */
 .sidebar-box h3 {
-    text-align: center; /* Center-align heading */
-    font-family: 'Merriweather', serif; /* Use Merriweather for a bolder look */
+    text-align: center;
+    font-family: 'Merriweather', serif;
     color: #4B6F44;
     font-size: 1.4em; /* Slightly larger sidebar heading */
     margin-bottom: 15px;
 }
 
-/* Sidebar with Icons */
 .sidebar-box p {
     margin: 10px 0;
     font-size: 1em; /* Larger font size for sidebar text */
@@ -107,10 +108,15 @@ header h1 {
     align-items: center;
 }
 
-.sidebar-box p i {
-    margin-right: 8px; /* Spacing for icons */
-    color: #4B6F44;
-    font-size: 1.2em; /* Slightly larger icons */
+/* Add Icons and Align Text Neatly */
+.sidebar-box p strong {
+    width: 90px; /* Fixed width to align all labels */
+    text-align: left;
+    margin-right: 5px;
+}
+
+.sidebar-box p span {
+    text-align: left;
 }
 
 /* Button Styling with Hover Effect */
