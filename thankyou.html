@@ -6,33 +6,38 @@
     <title>Thank You</title>
     <link rel="stylesheet" href="thankyou.css">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-96W6TB0Z9Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-96W6TB0Z9Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-96W6TB0Z9Z');
-</script>
+      gtag('config', 'G-96W6TB0Z9Z');
+    </script>
 </head>
 <body>
     <div class="thank-you-container">
         <h1>Thank You for Being our Food Waste Warrior!</h1>
         <p>Your response has been recorded successfully.</p>
-        <p>So far 21 out of 22 participants have responded. Base on their responses:</p>
+        <p>So far 21 out of 22 participants have responded. Based on their responses:</p>
         
         <div id="result"></div>
-
+<!-- Go to Homepage Button -->
+<button onclick="goToHomepage()" class="home-button">Go to Homepage</button>
+</div>
     </div>
     <script>
         // Retrieve values from local storage and display them
-
         document.getElementById("result").innerHTML = `
-        <p>Total catered portions: ${localStorage.getItem("cateredPortions")}</p>
-        <p>Total cost: $${localStorage.getItem("totalCost")}</p>
-        <p>Cost savings: $${localStorage.getItem("costSavings")}</p>;
-    </script>
-   
-</body>
+            <p>Total catered portions: ${localStorage.getItem("cateredPortions")}</p>
+            <p>Total cost: $${localStorage.getItem("totalCost")}</p>
+            <p>Cost savings: $${localStorage.getItem("costSavings")}</p>
+        `;
 
+        // JavaScript function to redirect to homepage
+        function goToHomepage() {
+            window.location.href = "index.html"; // Adjust the path if necessary
+        }
+    </script>
+</body>
 </html>

@@ -31,6 +31,24 @@ header h1 {
     margin: 0;
     font-size: 24px;
 }
+Style for adding borders to the table with food portion options */
+                .food-portion-table {
+                    border-collapse: collapse; /* Ensures borders do not double */
+                    width: 100%; /* Adjust width as needed */
+                }
+                
+                .food-portion-table th,
+                .food-portion-table td {
+                    border: 1px solid #686d0e; /* Border color */
+                    padding: 8px; /* Space inside cells */
+                    text-align: center; /* Center-align content */
+                }
+                
+                .food-portion-table th {
+                    background-color: #f0f2eb; /* Background color for header cells */
+                    font-weight: bold; /* Bold font for headers */
+                }
+
 .questionnaire {
     width: 100%; /* Ensures the table spans the full container width */
     margin: 20px 0;
