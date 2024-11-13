@@ -19,7 +19,8 @@
     <div class="thank-you-container">
         <h1>Thank You for Being our Food Waste Warrior!</h1>
         <p>Your response has been recorded successfully.</p>
-        <a href="index.html" class="home-button">Go back to homepage</a>
+        <p>So far 21 out of 22 participants have responded. Base on their responses:</p>
+        
         <div id="result"></div>
 
     </div>
@@ -29,10 +30,9 @@
         document.getElementById("result").innerHTML = `
         <p>Total catered portions: ${localStorage.getItem("cateredPortions")}</p>
         <p>Total cost: $${localStorage.getItem("totalCost")}</p>
-        <p>Cost savings: $${localStorage.getItem("costSavings")}</p>
-    `;
-
+        <p>Cost savings: $${localStorage.getItem("costSavings")}</p>;
     </script>
+   
 </body>
 
 </html>
