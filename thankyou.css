@@ -9,6 +9,14 @@ body {
     margin: 0;
 }
 
+/* Center container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
 /* Styling for the Thank You container */
 .thank-you-container {
     text-align: center;
@@ -16,8 +24,6 @@ body {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 500px;
 }
 
 /* Primary header styling */
@@ -63,4 +69,3 @@ p {
 .home-button:hover {
     background-color: #366224;
 }
-
