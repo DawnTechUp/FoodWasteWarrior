@@ -43,6 +43,7 @@ function calculateCatering() {
         currentCostSavings += 20;
     }
 
+    // Store updated values in localStorage for the Thank You page
     localStorage.setItem("cateredPortions", currentCateredPortions);
     localStorage.setItem("totalCost", currentTotalCost);
     localStorage.setItem("costSavings", currentCostSavings);
@@ -67,3 +68,40 @@ function calculateVegetarian() {
     // Redirect to the Thank You page
     window.location.href = "thankyou.html";
 }
+
+// Function to handle "Allergies" option selection
+function handleAllergiesSelection() {
+    const allergiesInput = document.getElementById("allergiesInput");
+
+    // Focus on the input field to prompt the user to enter their allergies
+    allergiesInput.focus();
+
+    // Listen for the "Enter" key to be pressed in the input field
+    allergiesInput.addEventListener("keydown", function onEnter(event) {
+        if (event.key === "Enter") {
+            // Remove the event listener after the user presses Enter
+            allergiesInput.removeEventListener("keydown", onEnter);
+
+            // Call the calculateAllergies function to handle redirection and calculations
+            calculateAllergies();
+        }
+    });
+}
+
+// Function to calculate values and redirect for "Allergies" option
+function calculateAllergies() {
+    console.log("Allergies option selected");
+
+    const totalPortions = 18;
+    const totalCost = 360; // $20 per portion * 18 portions
+    const costSavings = 60;
+
+    // Store these values in localStorage for the Thank You page
+    localStorage.setItem("cateredPortions", totalPortions);
+    localStorage.setItem("totalCost", totalCost);
+    localStorage.setItem("costSavings", costSavings);
+
+    // Redirect to the Thank You page
+    window.location.href = "thankyou.html";
+}
+

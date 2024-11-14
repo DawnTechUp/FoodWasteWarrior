@@ -1,5 +1,6 @@
 body {
     font-family: Merriweather, sans-serif;
+    font-size: 16px; /* Default font size */
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
@@ -8,6 +9,7 @@ body {
     margin: 0;
 }
 
+/* Styling for the Thank You container */
 .thank-you-container {
     text-align: center;
     background-color: #e9f5e1;
@@ -18,29 +20,34 @@ body {
     max-width: 500px;
 }
 
+/* Primary header styling */
 h1 {
     color: #4b8a35;
     font-size: 2em;
     margin-bottom: 15px;
 }
 
+/* Paragraph text styling */
 p {
     color: #333;
     font-size: 1.2em;
     margin: 10px 0;
 }
+
+/* Styling for the response summary on the Thank You page */
 .response-summary {
-    text-align: center; /* Center-align text */
+    text-align: center;
     color: #800000; /* Maroon color */
-    font-size: 1.2em; /* Increase font size for emphasis */
+    font-size: 1.5em; /* Closer to h2 size */
     font-weight: bold;
     margin-top: 20px;
 }
 
 .response-summary p {
-    margin: 10px 0; /* Add some vertical spacing between lines */
+    margin: 10px 0; /* Adds vertical spacing between lines */
 }
 
+/* Styling for the homepage button */
 .home-button {
     display: inline-block;
     margin-top: 20px;
@@ -56,3 +63,4 @@ p {
 .home-button:hover {
     background-color: #366224;
 }
+
