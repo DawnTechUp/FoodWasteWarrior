@@ -1,9 +1,18 @@
-/* Specific styling for Thank You Page */
+/* Ensure body uses the correct font and background for thank-you page */
+body.thank-you-page {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Specific styling for Thank You Page container */
 .thank-you-page .container {
     width: 80%;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 /* Styling for the Thank You container */
