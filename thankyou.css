@@ -1,24 +1,13 @@
-body {
-    font-family: Merriweather, sans-serif;
-    font-size: 16px; /* Default font size */
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-/* Center container */
-.container {
-    width: 100%;
+/* Specific styling for Thank You Page */
+.thank-you-page .container {
+    width: 80%;
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
 }
 
 /* Styling for the Thank You container */
-.thank-you-container {
+.thank-you-page .thank-you-container {
     text-align: center;
     background-color: #e9f5e1;
     padding: 40px;
@@ -26,35 +15,21 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Primary header styling */
-h1 {
-    color: #4b8a35;
-    font-size: 2em;
-    margin-bottom: 15px;
+/* Styling for Thank You page response summary */
+.thank-you-page .response-summary {
+    color: #800000; /* Maroon color */
+    font-size: 1.8em; /* Close to h2 size */
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
 }
 
-/* Paragraph text styling */
-p {
-    color: #333;
-    font-size: 1.2em;
+.thank-you-page .response-summary p {
     margin: 10px 0;
 }
 
-/* Styling for the response summary on the Thank You page */
-.response-summary {
-    text-align: center;
-    color: #800000; /* Maroon color */
-    font-size: 1.5em; /* Closer to h2 size */
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.response-summary p {
-    margin: 10px 0; /* Adds vertical spacing between lines */
-}
-
-/* Styling for the homepage button */
-.home-button {
+/* Styling for the Go to Homepage button */
+.thank-you-page .home-button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
@@ -66,6 +41,6 @@ p {
     transition: background-color 0.3s;
 }
 
-.home-button:hover {
+.thank-you-page .home-button:hover {
     background-color: #366224;
 }
