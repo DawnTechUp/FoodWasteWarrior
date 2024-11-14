@@ -1,13 +1,15 @@
+// Function to handle "No" option for lunch
 function calculateCatering() {
-    console.log ("calculating")
+    console.log("Calculating");
+
     const noOption = document.getElementById("noOption");
 
     // Check if the "No" option is selected
     if (noOption && noOption.checked) {
-        // Set the default values if the user is not having lunch
+        // Set default values if the user is not having lunch
         const totalPortions = 18;
         const totalCost = 360; // $20 per portion * 18 portions
-        const costSavings = 60; // Assuming this is the cost savings when catering 18 portions
+        const costSavings = 60;
 
         // Store these values in localStorage for the Thank You page
         localStorage.setItem("cateredPortions", totalPortions);
@@ -45,5 +47,23 @@ function calculateCatering() {
     localStorage.setItem("totalCost", currentTotalCost);
     localStorage.setItem("costSavings", currentCostSavings);
 
+    // Redirect to the Thank You page
+    window.location.href = "thankyou.html";
+}
+
+// Separate function to handle "Vegetarian" option
+function calculateVegetarian() {
+    console.log("Vegetarian option selected");
+
+    const totalPortions = 18;
+    const totalCost = 360; // $20 per portion * 18 portions
+    const costSavings = 60;
+
+    // Store these values in localStorage for the Thank You page
+    localStorage.setItem("cateredPortions", totalPortions);
+    localStorage.setItem("totalCost", totalCost);
+    localStorage.setItem("costSavings", costSavings);
+
+    // Redirect to the Thank You page
     window.location.href = "thankyou.html";
 }
