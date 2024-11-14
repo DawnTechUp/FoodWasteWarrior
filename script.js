@@ -1,4 +1,5 @@
 function calculateCatering() {
+    console.log ("calculating")
     const noOption = document.getElementById("noOption");
 
     // Check if the "No" option is selected
