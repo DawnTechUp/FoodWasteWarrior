@@ -1,24 +1,21 @@
 // Function to handle "No" option for lunch
 function calculateCatering() {
-    console.log("Calculating");
-
     const noOption = document.getElementById("noOption");
 
     // Check if the "No" option is selected
     if (noOption && noOption.checked) {
-        // Set default values if the user is not having lunch
         const totalPortions = 18;
         const totalCost = 360; // $20 per portion * 18 portions
         const costSavings = 60;
+        const portionsSaved = 22 - totalPortions; // Calculated as 4 when totalPortions is 18
 
-        // Store these values in localStorage for the Thank You page
         localStorage.setItem("cateredPortions", totalPortions);
         localStorage.setItem("totalCost", totalCost);
         localStorage.setItem("costSavings", costSavings);
+        localStorage.setItem("portionsSaved", portionsSaved);
 
-        // Redirect to the Thank You page
         window.location.href = "thankyou.html";
-        return; // Exit the function
+        return;
     }
 
     // Additional calculations if the user is having lunch
@@ -43,29 +40,36 @@ function calculateCatering() {
         currentCostSavings += 20;
     }
 
-    // Store updated values in localStorage for the Thank You page
+    // Calculate portions saved based on currentCateredPortions
+    let portionsSaved;
+    if (currentCateredPortions === 18) {
+        portionsSaved = 4;
+    } else if (currentCateredPortions === 19) {
+        portionsSaved = 3;
+    } else {
+        portionsSaved = 22 - currentCateredPortions;
+    }
+
     localStorage.setItem("cateredPortions", currentCateredPortions);
     localStorage.setItem("totalCost", currentTotalCost);
     localStorage.setItem("costSavings", currentCostSavings);
+    localStorage.setItem("portionsSaved", portionsSaved);
 
-    // Redirect to the Thank You page
     window.location.href = "thankyou.html";
 }
 
-// Separate function to handle "Vegetarian" option
+// Function to handle "Vegetarian" option
 function calculateVegetarian() {
-    console.log("Vegetarian option selected");
-
     const totalPortions = 18;
     const totalCost = 360; // $20 per portion * 18 portions
     const costSavings = 60;
+    const portionsSaved = 4; // Fixed value for 18 portions
 
-    // Store these values in localStorage for the Thank You page
     localStorage.setItem("cateredPortions", totalPortions);
     localStorage.setItem("totalCost", totalCost);
     localStorage.setItem("costSavings", costSavings);
+    localStorage.setItem("portionsSaved", portionsSaved);
 
-    // Redirect to the Thank You page
     window.location.href = "thankyou.html";
 }
 
@@ -73,16 +77,11 @@ function calculateVegetarian() {
 function handleAllergiesSelection() {
     const allergiesInput = document.getElementById("allergiesInput");
 
-    // Focus on the input field to prompt the user to enter their allergies
     allergiesInput.focus();
 
-    // Listen for the "Enter" key to be pressed in the input field
     allergiesInput.addEventListener("keydown", function onEnter(event) {
         if (event.key === "Enter") {
-            // Remove the event listener after the user presses Enter
             allergiesInput.removeEventListener("keydown", onEnter);
-
-            // Call the calculateAllergies function to handle redirection and calculations
             calculateAllergies();
         }
     });
@@ -90,18 +89,15 @@ function handleAllergiesSelection() {
 
 // Function to calculate values and redirect for "Allergies" option
 function calculateAllergies() {
-    console.log("Allergies option selected");
-
     const totalPortions = 18;
     const totalCost = 360; // $20 per portion * 18 portions
     const costSavings = 60;
+    const portionsSaved = 4; // Fixed value for 18 portions
 
-    // Store these values in localStorage for the Thank You page
     localStorage.setItem("cateredPortions", totalPortions);
     localStorage.setItem("totalCost", totalCost);
     localStorage.setItem("costSavings", costSavings);
+    localStorage.setItem("portionsSaved", portionsSaved);
 
-    // Redirect to the Thank You page
     window.location.href = "thankyou.html";
 }
-

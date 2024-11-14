@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link the same CSS file here -->
+    <!-- Link to Google Fonts for Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="thankyou.css"> <!-- Link to your CSS file -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-96W6TB0Z9Z"></script>
     <script>
@@ -15,30 +17,28 @@
     </script>
 </head>
 
-<body class="thank-you-page" style="font-family: 'Montserrat', sans-serif; background-color: #f4f4f4;">
-    <div class="container" style="width: 80%; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+<body class="thank-you-page">
+    <div class="container">
         <header>
-            <h1 style="color: white; font-size: 2em;">YOU ARE DA BEST!!!</h1>
-            <p style="color: whitesmoke; font-size: 1.2em;">Thank You for Being our Food Waste Warrior!</p>
+            <h1>YOU ARE DA BEST!!!</h1>
+            <p>Thank You for Being our Food Waste Warrior!</p>
         </header>
 
-        <div class="thank-you-container" style="text-align: center; background-color: #e9f5e1; padding: 40px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        
-            <p><strong>Your response has been recorded successfully.<strong></p>
+        <div class="thank-you-container">
+            <p>Your response has been recorded successfully.</p>
 
-            <!-- Prominent section for response summary with inline styles -->
-            <div class="response-summary" style="color: #800000; font-size: 1.8em; font-weight: bold; text-align: center; margin-top: 20px;">
+            <!-- Prominent section for response summary -->
+            <div class="response-summary">
                 <p>So far, 21 out of 22 participants have responded. Based on their responses:</p>
                 <p>Total catered portions: <span id="totalPortions"></span></p>
                 <p>Total cost: $<span id="totalCost"></span></p>
                 <p>Cost savings: $<span id="costSavings"></span></p>
+                <p>Total portions saved: <span id="portionsSaved"></span></p>
             </div>
 
-            <img src="photos/foodwarriorpic.webp" style="width: 100%; margin-top: 20px;" />
+            <img src="photos/foodwarriorpic.webp" style="width: 100%" alt="Food Waste Warrior">
 
-            <button class="home-button" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #4b8a35; color: white; text-decoration: none; font-size: 1em; border-radius: 4px; transition: background-color 0.3s;" onclick="window.location.href='index.html'">
-                Go to Homepage
-            </button>
+            <button class="home-button" onclick="window.location.href='index.html'">Go to Homepage</button>
         </div>
     </div>
 
@@ -47,6 +47,7 @@
         document.getElementById("totalPortions").innerText = localStorage.getItem("cateredPortions") || "N/A";
         document.getElementById("totalCost").innerText = localStorage.getItem("totalCost") || "N/A";
         document.getElementById("costSavings").innerText = localStorage.getItem("costSavings") || "N/A";
+        document.getElementById("portionsSaved").innerText = localStorage.getItem("portionsSaved") || "N/A";
     </script>
 </body>
 </html>

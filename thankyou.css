@@ -1,18 +1,35 @@
-/* Ensure body uses the correct font and background for thank-you page */
+/* Apply Montserrat font to the entire page */
 body.thank-you-page {
     font-family: 'Montserrat', sans-serif;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-/* Specific styling for Thank You Page container */
+/* Main container styling */
 .thank-you-page .container {
     width: 80%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+/* Header styling */
+header h1 {
+    color: #4b8a35;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+header p {
+    text-align: center;
+    color: #366224;
+    font-size: 1.1em;
+    margin: 0;
 }
 
 /* Styling for the Thank You container */
@@ -27,7 +44,7 @@ body.thank-you-page {
 /* Styling for Thank You page response summary */
 .thank-you-page .response-summary {
     color: #800000; /* Maroon color */
-    font-size: 1.8em; /* Close to h2 size */
+    font-size: 1.5em;
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
@@ -46,10 +63,20 @@ body.thank-you-page {
     color: white;
     text-decoration: none;
     font-size: 1em;
+    font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .thank-you-page .home-button:hover {
     background-color: #366224;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .thank-you-page .container {
+        width: 90%;
+        padding: 10px;
+    }
 }
