@@ -23,11 +23,11 @@
             <p>Support MDDI in the Global Fight against Food Waste</p>
         </header>
 
- <!-- Light green info box -->
- <div class="info-box">
-    <strong>Lunch buffet for MDDI internal staff event, 20 Nov 2024</strong><br>
-    5 min is all it takes to be a food waste warrior
-</div>
+        <!-- Light green info box -->
+        <div class="info-box">
+            <img src="photos/pink star.jfif" class="star-icon" alt="pink star"/> 
+            5 min is all it takes to be a food waste warrior  <img src="photos/pink star.jfif" class="star-icon" alt="pink star"/> 
+        </div>
 
         <!-- New Table for Additional Questions -->
         <div class="questionnaire">
@@ -42,10 +42,12 @@
                 <tr>
                     <td><span class="question-text">Indicate your dietary requirement, if any. (All food items are halal)</span></td>
                     <td>
-                        <label><input type="radio" name="diet" value="no"> No</label>
-                        <label><input type="radio" name="diet" value="vegetarian" onclick="calculateVegetarian()"> Vegetarian</label>
-                        <label><input type="radio" name="diet" value="allergies" id="allergiesOption" onclick="handleAllergiesSelection()"> Allergies</label>
-                        <input type="text" name="allergies" id="allergiesInput" placeholder="Specify your allergies" class="allergy-input">
+                        <div class="diet-options">
+                            <label><input type="radio" name="diet" value="no"> No</label>
+                            <label><input type="radio" name="diet" value="vegetarian" onclick="calculateVegetarian()"> Vegetarian</label>
+                            <label><input type="radio" name="diet" value="allergies" id="allergiesOption" onclick="handleAllergiesSelection()"> Allergies</label>
+                            <input type="text" name="allergies" id="allergiesInput" placeholder="Specify your allergies" class="allergy-input">
+                        </div>
                     </td>
                 </tr>
             </table>
