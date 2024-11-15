@@ -104,6 +104,38 @@ header p {
     font-weight: bold;
 }
 
+/* Food portion table styling with hover effect */
+.food-portion-table {
+    flex: 1; /* Allows this table to take up remaining space */
+    background-color: white; /* White background */
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-portion-table th, .food-portion-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Header styling */
+.food-portion-table th {
+    background-color: #e9f5e1; /* Light green header */
+    color: #4b8a35;
+    font-weight: bold;
+}
+
+/* Hover effect for food portion table rows */
+.food-portion-table tr:hover {
+    background-color: #e0f7e9; /* Light green background on hover */
+    transition: background-color 0.3s ease;
+}
+
+
 /* Food portion and sidebar styling */
 .table-sidebar-container {
     display: flex;
@@ -174,8 +206,17 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #366224;
+/* Styling the label for a hover effect */
+label:hover {
+    background-color: #e0f7e9; /* Light green background on hover */
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Change color of the label text on hover */
+label:hover input[type="radio"] + span {
+    color: #4b8a35; /* Change text color on hover */
 }
 
 /* Form input styling */
@@ -191,6 +232,20 @@ input[type="text"] {
     margin-top: 5px;
     box-sizing: border-box;
 }
+
+/* Styling the label for a hover effect */
+label:hover {
+    background-color: #e0f7e9; /* Light green background on hover */
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Change color of the label text on hover */
+label:hover input[type="radio"] + span {
+    color: #4b8a35; /* Change text color on hover */
+}
+
 
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {

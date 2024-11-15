@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Waste Warrior</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <script src="script.js" defer></script> <!-- Link to your JavaScript file with defer attribute -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-96W6TB0Z9Z"></script>
     <script>
@@ -16,7 +16,7 @@
     </script>
 </head>
 
-<body>
+<body onload="confirmSpecialMeal()"> <!-- Initialize confirmSpecialMeal on page load -->
     <div class="container">
         <header>
             <h1>FOOD WASTE WARRIOR</h1>
@@ -26,27 +26,26 @@
         <!-- Light green info box -->
         <div class="info-box">
             <img src="photos/pink star.jfif" class="star-icon" alt="pink star"/> 
-            5 min is all it takes to be a food waste warrior  <img src="photos/pink star.jfif" class="star-icon" alt="pink star"/> 
+            5 min is all it takes to be a food waste warrior <img src="photos/pink star.jfif" class="star-icon" alt="pink star"/> 
         </div>
 
-        <!-- New Table for Additional Questions -->
+        <!-- Questionnaire Table -->
         <div class="questionnaire">
             <table class="sleek-table">
                 <tr>
                     <td><span class="question-text">Are you having lunch with us?</span></td>
                     <td>
-                        <label><input type="radio" name="lunch" value="yes"> Yes</label>
+                        <label><input type="radio" name="lunch" value="yes" onclick="handleLunchSelection()"> Yes</label>
                         <label><input type="radio" name="lunch" id="noOption" onclick="calculateCatering()" value="no"> No</label>
                     </td>
                 </tr>
                 <tr>
-                    <td><span class="question-text">Indicate your dietary requirement.
-                        <p style="margin-top: 3px;"> </p> (All food items are halal)</span></td>
+                    <td><span class="question-text">Indicate your dietary requirement (All food items are halal)</span></td>
                     <td>
                         <div class="diet-options">
                             <label><input type="radio" name="diet" value="no"> No</label>
-                            <label><input type="radio" name="diet" value="vegetarian" onclick="calculateVegetarian()"> Vegetarian</label>
-                            <label><input type="radio" name="diet" value="allergies" id="allergiesOption" onclick="handleAllergiesSelection()"> Allergies</label>
+                            <label><input type="radio" name="diet" value="vegetarian"> Vegetarian</label>
+                            <label><input type="radio" name="diet" value="allergies" id="allergiesOption"> Allergies</label>
                             <input type="text" name="allergies" id="allergiesInput" placeholder="Specify allergies. Click ENTER." class="allergy-input">
                         </div>
                     </td>
@@ -69,35 +68,35 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>1. Main (rice/beehoon/pasta)</strong></td>
+                        <td>Main (rice/beehoon/pasta)</td>
                         <td><input type="radio" name="main" value="0"></td>
                         <td><input type="radio" name="main" value="1/3"></td>
                         <td><input type="radio" name="main" value="1/2"></td>
                         <td><input type="radio" name="main" value="1"></td>
                     </tr>
                     <tr>
-                        <td><strong>2. Vegetables</strong></td>
+                        <td>Vegetables</td>
                         <td><input type="radio" name="vegetables" value="0"></td>
                         <td><input type="radio" name="vegetables" value="1/3"></td>
                         <td><input type="radio" name="vegetables" value="1/2"></td>
                         <td><input type="radio" name="vegetables" value="1"></td>
                     </tr>
                     <tr>
-                        <td><strong>3. Fish</strong></td>
+                        <td>Fish</td>
                         <td><input type="radio" name="fish" value="0"></td>
                         <td><input type="radio" name="fish" value="1/3"></td>
                         <td><input type="radio" name="fish" value="1/2"></td>
                         <td><input type="radio" name="fish" value="1"></td>
                     </tr>
                     <tr>
-                        <td><strong>4. Dessert</strong></td>
+                        <td>Dessert</td>
                         <td><input type="radio" name="dessert" value="0"></td>
                         <td><input type="radio" name="dessert" value="1/3"></td>
                         <td><input type="radio" name="dessert" value="1/2"></td>
                         <td><input type="radio" name="dessert" value="1"></td>
                     </tr>
                     <tr>
-                        <td><strong>5. Beverage</strong></td>
+                        <td>Beverage</td>
                         <td><input type="radio" name="beverage" value="0"></td>
                         <td><input type="radio" name="beverage" value="1/3"></td>
                         <td><input type="radio" name="beverage" value="1/2"></td>
@@ -110,15 +109,15 @@
             <div class="sidebar-box">
                 <h3>1 Portion Means for:</h3>
                 <img src="photos/ironladle.jfif" style="width: 100%" alt="Ladle image"/> 
-                <p><strong>Food:</strong> <span>1 full ladle/tong</span></p>
+                <p><strong>Food:</strong> 1 full ladle/tong</p>
                 <img src="photos/bowl.jfif" style="width: 100%" alt="Bowl image"/>
-                <p><strong>Dessert:</strong> <span>1 full disposable bowl</span></p>
+                <p><strong>Dessert:</strong> 1 full disposable bowl</p>
                 <img src="photos/cup.jfif" style="width: 100%" alt="Cup image"/>
-                <p><strong>Beverage:</strong> <span>1 full disposable cup</span></p>
+                <p><strong>Beverage:</strong> 1 full disposable cup</p>
             </div>
         </div>
 
-        <!-- Button to trigger calculation and potential redirection -->
+        <!-- Button to trigger calculation and redirection -->
         <button onclick="calculateCatering()">Calculate</button>
     </div>
 </body>

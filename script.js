@@ -1,4 +1,4 @@
-// Function to display a loading spinner
+// Function to show a loading spinner
 function showLoadingSpinner() {
     const spinner = document.createElement("div");
     spinner.id = "loadingSpinner";
@@ -21,7 +21,78 @@ function removeLoadingSpinner() {
     if (spinner) spinner.remove();
 }
 
-// Function to handle "No" option for lunch
+// Function to calculate and redirect for "Allergies" option
+function calculateAllergies() {
+    const totalPortions = 18;
+    const totalCost = 360; // $20 per portion * 18 portions
+    const costSavings = 60;
+    const portionsSaved = 4; // Fixed value for 18 portions
+
+    localStorage.setItem("cateredPortions", totalPortions);
+    localStorage.setItem("totalCost", totalCost);
+    localStorage.setItem("costSavings", costSavings);
+    localStorage.setItem("portionsSaved", portionsSaved);
+
+    showLoadingSpinner();
+    setTimeout(() => {
+        window.location.href = "thankyou.html";
+    }, 1000); // Adding a delay to allow the spinner to appear
+}
+
+// Function to calculate and redirect for "Vegetarian" option
+function calculateVegetarian() {
+    const totalPortions = 18;
+    const totalCost = 360; // $20 per portion * 18 portions
+    const costSavings = 60;
+    const portionsSaved = 4; // Fixed value for 18 portions
+
+    localStorage.setItem("cateredPortions", totalPortions);
+    localStorage.setItem("totalCost", totalCost);
+    localStorage.setItem("costSavings", costSavings);
+    localStorage.setItem("portionsSaved", portionsSaved);
+
+    showLoadingSpinner();
+    setTimeout(() => {
+        window.location.href = "thankyou.html";
+    }, 1000); // Adding a delay to allow the spinner to appear
+}
+
+// Function to handle special meal confirmations
+function confirmSpecialMeal() {
+    const vegetarianOption = document.querySelector('input[name="diet"][value="vegetarian"]');
+    const allergiesInput = document.getElementById("allergiesInput");
+
+    vegetarianOption.addEventListener("change", function() {
+        if (vegetarianOption.checked) {
+            const confirmVegetarian = confirm("You selected 'Vegetarian'. Please confirm if this is correct. A separate bento box will be issued for your meal.");
+            if (confirmVegetarian) {
+                calculateVegetarian(); // Redirect on confirmation
+            } else {
+                vegetarianOption.checked = false;
+            }
+        }
+    });
+
+    // Event listener for when the user presses "Enter" after typing allergies
+    allergiesInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Prevent form submission or default actions
+            const allergyDetails = allergiesInput.value.trim();
+            if (allergyDetails) { // Check if the allergies input has any text
+                const confirmAllergy = confirm("You entered allergies: '" + allergyDetails + "'. Please confirm if this is correct. A separate bento box will be issued for your meal.");
+                if (confirmAllergy) {
+                    calculateAllergies(); // Redirect on confirmation
+                } else {
+                    allergiesInput.value = ""; // Clear input if not confirmed
+                }
+            } else {
+                alert("Please specify your allergies before pressing Enter.");
+            }
+        }
+    });
+}
+
+// Function to handle "No" option for lunch and redirect if selected
 function calculateCatering() {
     const yesOption = document.querySelector('input[name="lunch"][value="yes"]');
     const noOption = document.querySelector('input[name="lunch"][value="no"]');
@@ -103,62 +174,5 @@ function calculateCatering() {
     }, 1000); // Adding a delay to allow the spinner to appear
 }
 
-// Function to handle "Vegetarian" option
-function calculateVegetarian() {
-    const totalPortions = 18;
-    const totalCost = 360; // $20 per portion * 18 portions
-    const costSavings = 60;
-    const portionsSaved = 4; // Fixed value for 18 portions
-
-    localStorage.setItem("cateredPortions", totalPortions);
-    localStorage.setItem("totalCost", totalCost);
-    localStorage.setItem("costSavings", costSavings);
-    localStorage.setItem("portionsSaved", portionsSaved);
-
-    showLoadingSpinner();
-    setTimeout(() => {
-        window.location.href = "thankyou.html";
-    }, 1000); // Adding a delay to allow the spinner to appear
-}
-
-// Function to handle "Allergies" option selection
-function handleAllergiesSelection() {
-    const allergiesInput = document.getElementById("allergiesInput");
-
-    allergiesInput.focus();
-
-    allergiesInput.addEventListener("keydown", function onEnter(event) {
-        if (event.key === "Enter") {
-            allergiesInput.removeEventListener("keydown", onEnter);
-            calculateAllergies();
-        }
-    });
-}
-
-// Function to calculate values and redirect for "Allergies" option
-function calculateAllergies() {
-    const totalPortions = 18;
-    const totalCost = 360; // $20 per portion * 18 portions
-    const costSavings = 60;
-    const portionsSaved = 4; // Fixed value for 18 portions
-
-    localStorage.setItem("cateredPortions", totalPortions);
-    localStorage.setItem("totalCost", totalCost);
-    localStorage.setItem("costSavings", costSavings);
-    localStorage.setItem("portionsSaved", portionsSaved);
-
-    showLoadingSpinner();
-    setTimeout(() => {
-        window.location.href = "thankyou.html";
-    }, 1000); // Adding a delay to allow the spinner to appear
-}
-
-// CSS for loading spinner animation
-const spinnerStyle = document.createElement("style");
-spinnerStyle.innerHTML = `
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-`;
-document.head.appendChild(spinnerStyle);
+// Initialize the special meal confirmation when the page loads
+document.addEventListener("DOMContentLoaded", confirmSpecialMeal);
