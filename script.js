@@ -32,7 +32,7 @@ function calculateCatering() {
         return;
     }
 
-    // If "No" option is selected, confirm with the user
+    // If "No" option is selected, confirm with the user and proceed without portions or dietary selections
     if (noOption.checked) {
         const confirmNoLunch = confirm("You selected 'No' for lunch. Are you sure?");
         if (!confirmNoLunch) return;
@@ -54,6 +54,13 @@ function calculateCatering() {
         return;
     }
 
+    // Check if the user selected portions if they chose "Yes"
+    const portionSelections = document.querySelectorAll('.food-portion-table input[type="radio"]:checked');
+    if (portionSelections.length === 0) {
+        alert("Please select your portion preferences before proceeding.");
+        return;
+    }
+
     // Additional calculations if the user is having lunch
     let currentCateredPortions = 18;
     let currentTotalCost = 360;
@@ -61,7 +68,6 @@ function calculateCatering() {
     const perPersonCost = 20;
 
     let userIsFullPortion = false;
-    const portionSelections = document.querySelectorAll('input[type="radio"]:checked');
 
     portionSelections.forEach(selection => {
         if (selection.value === "1/2" || selection.value === "1") {
